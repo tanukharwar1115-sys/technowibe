@@ -33,9 +33,9 @@ export default function LiveConcept() {
   }, []);
 
   return (
-    <section ref={ref} className="py-24 border-b border-white/5 bg-[var(--bg-alt)]">
+    <section ref={ref} className="py-16 sm:py-24 border-b border-white/5 bg-[var(--bg-alt)]">
       <div className="section-container">
-        <Reveal className="max-w-2xl mb-14">
+        <Reveal className="max-w-2xl mb-10 sm:mb-14">
           <p className="text-sm uppercase tracking-widest text-[var(--accent)] mb-3">
             Live Concept
           </p>

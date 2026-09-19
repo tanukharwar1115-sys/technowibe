@@ -25,7 +25,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative pt-32 pb-20 overflow-hidden border-b border-white/5"
+      className="relative pt-24 pb-12 sm:pt-32 sm:pb-20 overflow-hidden border-b border-white/5"
     >
       <div className="pointer-events-none absolute inset-0 -z-10 dot-grid" />
       <div
@@ -37,7 +37,7 @@ export default function Hero() {
       />
 
       <div className="section-container">
-        <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-14 lg:gap-10 items-center lg:items-start">
+        <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-9 sm:gap-14 lg:gap-10 items-center lg:items-start">
           {/* Left: copy */}
           <div>
             <span className="animate-rise inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs text-[var(--text-dim)]">
@@ -56,7 +56,7 @@ export default function Hero() {
             </div>
 
             <h1
-              className="animate-rise mt-7 text-[2.6rem] leading-[1.05] sm:text-6xl font-semibold"
+              className="animate-rise mt-6 sm:mt-7 text-[2.45rem] leading-[1.05] sm:text-6xl font-semibold"
               style={{ animationDelay: "160ms" }}
             >
               AI AUTOMATION
@@ -86,7 +86,7 @@ export default function Hero() {
             </p>
 
             <div
-              className="animate-rise mt-9 flex flex-col sm:flex-row gap-4"
+              className="animate-rise mt-7 sm:mt-9 flex flex-col sm:flex-row gap-3 sm:gap-4"
               style={{ animationDelay: "480ms" }}
             >
               <a
@@ -108,7 +108,7 @@ export default function Hero() {
             </div>
 
             <div
-              className="animate-rise mt-10 rounded-2xl border border-white/10 bg-white/[0.02] px-5 py-4 flex flex-wrap items-center gap-x-2 gap-y-3"
+              className="animate-rise mt-7 sm:mt-10 rounded-2xl border border-white/10 bg-white/[0.02] px-4 py-3.5 sm:px-5 sm:py-4 flex flex-wrap items-center gap-x-2 gap-y-2.5"
               style={{ animationDelay: "560ms" }}
             >
               {heroPipeline.map((label, i) => {
@@ -207,11 +207,11 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="mt-16 grid sm:grid-cols-3 gap-5">
+        <div className="mt-10 sm:mt-16 grid sm:grid-cols-3 gap-3 sm:gap-5">
           {heroTrust.map((t) => (
             <div
               key={t.title}
-              className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/[0.02] px-4 py-3"
+              className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/[0.02] px-4 py-3 sm:py-3"
             >
               <Check size={16} className="text-[var(--accent)] mt-0.5 shrink-0" />
               <div>

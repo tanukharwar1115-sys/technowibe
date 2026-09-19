@@ -3,9 +3,9 @@ import Reveal from "./Reveal";
 
 export default function About() {
   return (
-    <section id="about" className="py-24 border-b border-white/5 bg-[var(--bg-alt)]">
+    <section id="about" className="py-16 sm:py-24 border-b border-white/5 bg-[var(--bg-alt)]">
       <div className="section-container">
-        <Reveal className="max-w-2xl mb-14">
+        <Reveal className="max-w-2xl mb-10 sm:mb-14">
           <p className="text-sm uppercase tracking-widest text-[var(--accent)] mb-3">
             About
           </p>

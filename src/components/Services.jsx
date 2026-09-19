@@ -30,9 +30,9 @@ export default function Services() {
   const [tapped, setTapped] = useState(null);
 
   return (
-    <section id="services" className="py-24 border-b border-white/5">
+    <section id="services" className="py-16 sm:py-24 border-b border-white/5">
       <div className="section-container">
-        <Reveal className="max-w-2xl mb-14">
+        <Reveal className="max-w-2xl mb-10 sm:mb-14">
           <p className="text-sm uppercase tracking-widest text-[var(--accent)] mb-3">
             Services
           </p>
@@ -41,20 +41,21 @@ export default function Services() {
           </h2>
         </Reveal>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5">
           {services.map((s, i) => {
             const Icon = ICONS[s.icon];
             return (
               <Reveal key={s.title} delay={(i % 3) * 80}>
                 <div
-                  className="card group p-6 h-full cursor-default"
+                  className="card group p-4 sm:p-6 h-full cursor-default flex sm:block gap-4"
                   onClick={() => setTapped(tapped === i ? null : i)}
                 >
-                  <div className="w-10 h-10 rounded-lg bg-[var(--accent-bg)] flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">
+                  <div className="w-10 h-10 shrink-0 rounded-lg bg-[var(--accent-bg)] flex items-center justify-center sm:mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">
                     <Icon size={18} className="text-[var(--accent)]" />
                   </div>
+                  <div className="min-w-0">
                   <h3 className="font-medium">{s.title}</h3>
-                  <p className="mt-2 text-sm text-[var(--text-dim)]">
+                  <p className="mt-1.5 sm:mt-2 text-sm text-[var(--text-dim)]">
                     {s.desc}
                   </p>
 
@@ -77,6 +78,7 @@ export default function Services() {
                         </span>
                       ))}
                     </div>
+                  </div>
                   </div>
                 </div>
               </Reveal>

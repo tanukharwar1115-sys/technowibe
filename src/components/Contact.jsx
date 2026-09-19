@@ -80,7 +80,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden">
+    <section id="contact" className="py-16 sm:py-24 relative overflow-hidden">
       <div
         className="pointer-events-none absolute inset-0 -z-10"
         style={{
@@ -90,7 +90,7 @@ export default function Contact() {
       />
 
       <div className="section-container">
-        <Reveal className="max-w-2xl mb-12">
+        <Reveal className="max-w-2xl mb-9 sm:mb-12">
           <p className="text-sm uppercase tracking-widest text-[var(--accent)] mb-3">
             Contact
           </p>

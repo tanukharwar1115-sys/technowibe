@@ -11,9 +11,9 @@ const ICONS = {
 
 export default function WhyMe() {
   return (
-    <section id="why" className="py-24 border-b border-white/5">
+    <section id="why" className="py-16 sm:py-24 border-b border-white/5">
       <div className="section-container">
-        <Reveal className="max-w-2xl mb-14">
+        <Reveal className="max-w-2xl mb-10 sm:mb-14">
           <p className="text-sm uppercase tracking-widest text-[var(--accent)] mb-3">
             Why Work With Me
           </p>
