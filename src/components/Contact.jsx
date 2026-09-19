@@ -53,20 +53,19 @@ export default function Contact() {
     event.preventDefault();
     setStatus("sending");
     const form = event.target;
-    const payload = Object.fromEntries(new FormData(form));
+    // Sent as FormData, not JSON: a JSON content-type triggers a CORS
+    // preflight that Web3Forms rejects.
+    const body = new FormData(form);
+    body.append("access_key", WEB3FORMS_KEY);
+    body.append(
+      "subject",
+      `New project enquiry from ${body.get("name")}`,
+    );
 
     try {
       const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          access_key: WEB3FORMS_KEY,
-          subject: `New project enquiry from ${payload.name}`,
-          ...payload,
-        }),
+        body,
       });
       const data = await res.json();
       if (data.success) {

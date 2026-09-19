@@ -4,7 +4,7 @@
 
 // Get a free key at https://web3forms.com (enter your email, they mail it to
 // you) and paste it below. Until you do, the contact form will show an error.
-export const WEB3FORMS_KEY = "YOUR-WEB3FORMS-ACCESS-KEY";
+export const WEB3FORMS_KEY = "b41cc5da-300c-49b5-bcf7-da35a4d1885e";
 
 // WhatsApp click-to-chat. Put your number here with the country code and
 // DIGITS ONLY — no +, spaces, or dashes.  +91 98765 43210 -> "919876543210"
